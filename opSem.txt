@@ -1,0 +1,7 @@
+Operational Semantics
+
+BNF: Backus Naur Form
+
+e ::= e And e |  e Or e | Not e
+
+e is a meta-variables, ^, & are terminals
