@@ -1,0 +1,63 @@
+### Starting build.
+# Target: src/TFbSRX/tfbsrx.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrx.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrx.ml > src/TFbSRX/tfbsrx.ml.depends # cached
+# Target: src/application.ml.depends, tags: { debug, explain, extension:ml, file:src/application.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/application.ml > src/application.ml.depends # cached
+# Target: src/fbdk.ml.depends, tags: { debug, explain, extension:ml, file:src/fbdk.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/fbdk.ml > src/fbdk.ml.depends # cached
+# Target: src/fbdk.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/fbdk.cmo, file:src/fbdk.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src -I src/TFbSRX -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/fbdk.cmo src/fbdk.ml # cached
+# Target: src/version.ml.depends, tags: { debug, explain, extension:ml, file:src/version.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/version.ml > src/version.ml.depends # cached
+# Target: src/version.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/version.cmo, file:src/version.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src -I src/TFbSRX -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/version.cmo src/version.ml # cached
+# Target: src/application.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/application.cmo, file:src/application.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src -I src/TFbSRX -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/application.cmo src/application.ml # cached
+# Target: src/TFbSRX/tfbsrxast.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxast.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxast.ml > src/TFbSRX/tfbsrxast.ml.depends # cached
+# Target: src/TFbSRX/tfbsrxast.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxast.cmo, file:src/TFbSRX/tfbsrxast.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxast.cmo src/TFbSRX/tfbsrxast.ml # cached
+# Target: src/TFbSRX/tfbsrxinterp.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxinterp.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxinterp.ml > src/TFbSRX/tfbsrxinterp.ml.depends # cached
+# Target: src/TFbSRX/tfbsrxinterp.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxinterp.cmo, file:src/TFbSRX/tfbsrxinterp.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxinterp.cmo src/TFbSRX/tfbsrxinterp.ml # cached
+# Target: src/TFbSRX/tfbsrxlexer.mll, tags: { debug, explain, extension:mll, file:src/TFbSRX/tfbsrxlexer.mll, lexer, ocaml, ocamllex, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamllex.opt -q src/TFbSRX/tfbsrxlexer.mll # cached
+# Target: src/TFbSRX/tfbsrxlexer.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxlexer.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxlexer.ml > src/TFbSRX/tfbsrxlexer.ml.depends # cached
+# Target: src/TFbSRX/tfbsrxparser.mly.depends, tags: { debug, explain, extension:mly, file:src/TFbSRX/tfbsrxparser.mly, infer, menhir_ocamldep, ocaml, ocamldep, quiet, traverse }
+menhir --raw-depend --ocamldep '/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules' src/TFbSRX/tfbsrxparser.mly > src/TFbSRX/tfbsrxparser.mly.depends # cached
+# Target: src/TFbSRX/tfbsrxparser.mly, tags: { byte, compile, debug, explain, extension:ml, extension:mly, file:src/TFbSRX/tfbsrxparser.ml, file:src/TFbSRX/tfbsrxparser.mly, infer, menhir, ocaml, parser, quiet, traverse }
+menhir --ocamlc '/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV' --explain --infer src/TFbSRX/tfbsrxparser.mly # cached
+# Target: src/TFbSRX/tfbsrxparser.mli.depends, tags: { debug, explain, extension:mli, file:src/TFbSRX/tfbsrxparser.mli, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxparser.mli > src/TFbSRX/tfbsrxparser.mli.depends # cached
+# Target: src/TFbSRX/tfbsrxparser.cmi, tags: { byte, compile, debug, explain, extension:mli, file:src/TFbSRX/tfbsrxparser.mli, interf, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxparser.cmi src/TFbSRX/tfbsrxparser.mli # cached
+# Target: src/TFbSRX/tfbsrxlexer.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxlexer.cmo, file:src/TFbSRX/tfbsrxlexer.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxlexer.cmo src/TFbSRX/tfbsrxlexer.ml # cached
+# Target: src/TFbSRX/tfbsrxoptions.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxoptions.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxoptions.ml > src/TFbSRX/tfbsrxoptions.ml.depends # cached
+# Target: src/TFbSRX/tfbsrxoptions.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxoptions.cmo, file:src/TFbSRX/tfbsrxoptions.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxoptions.cmo src/TFbSRX/tfbsrxoptions.ml # cached
+# Target: src/TFbSRX/tfbsrxpp.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxpp.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxpp.ml > src/TFbSRX/tfbsrxpp.ml.depends # cached
+# Target: src/TFbSRX/tfbsrxpp.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxpp.cmo, file:src/TFbSRX/tfbsrxpp.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxpp.cmo src/TFbSRX/tfbsrxpp.ml # cached
+# Target: src/TFbSRX/tfbsrxtype.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxtype.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxtype.ml > src/TFbSRX/tfbsrxtype.ml.depends
+# Target: src/TFbSRX/tfbsrxtype.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxtype.cmo, file:src/TFbSRX/tfbsrxtype.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxtype.cmo src/TFbSRX/tfbsrxtype.ml
++ /home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxtype.cmo src/TFbSRX/tfbsrxtype.ml
+File "src/TFbSRX/tfbsrxtype.ml", line 281, characters 17-28:
+281 |             (let outputType1 = typecheck_g ((id1, TArrow(fbtype1, fbtype2))::(id2, fbtype2)::(g)) e1 in let outputType2 =
+                       ^^^^^^^^^^^
+Warning 26: unused variable outputType1.
+# Target: src/TFbSRX/tfbsrx.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrx.cmo, file:src/TFbSRX/tfbsrx.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrx.cmo src/TFbSRX/tfbsrx.ml
+# Target: src/TFbSRX/tfbsrxparser.ml.depends, tags: { debug, explain, extension:ml, file:src/TFbSRX/tfbsrxparser.ml, ocaml, ocamldep, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamldep.opt -modules src/TFbSRX/tfbsrxparser.ml > src/TFbSRX/tfbsrxparser.ml.depends # cached
+# Target: src/TFbSRX/tfbsrxparser.cmo, tags: { byte, compile, debug, explain, extension:cmo, extension:ml, file:src/TFbSRX/tfbsrxparser.cmo, file:src/TFbSRX/tfbsrxparser.ml, implem, ocaml, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -c -g -I src/TFbSRX -I src -I src/FbSR -I src/FbRX -I src/FbReL -I src/Fb -I src/BOOL -I src/AFbV -o src/TFbSRX/tfbsrxparser.cmo src/TFbSRX/tfbsrxparser.ml # cached
+# Target: src/TFbSRX/tfbsrx.byte, tags: { byte, debug, dont_link_with, explain, extension:byte, file:src/TFbSRX/tfbsrx.byte, link, ocaml, program, quiet, traverse }
+/home/jz1242/.opam/4.09.0/bin/ocamlc.opt -g -I src/TFbSRX -I src src/TFbSRX/tfbsrxast.cmo src/TFbSRX/tfbsrxinterp.cmo src/TFbSRX/tfbsrxparser.cmo src/TFbSRX/tfbsrxlexer.cmo src/TFbSRX/tfbsrxoptions.cmo src/TFbSRX/tfbsrxpp.cmo src/TFbSRX/tfbsrxtype.cmo src/fbdk.cmo src/version.cmo src/application.cmo src/TFbSRX/tfbsrx.cmo -o src/TFbSRX/tfbsrx.byte
+# Compilation successful.

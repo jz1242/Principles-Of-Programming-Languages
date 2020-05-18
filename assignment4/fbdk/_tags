@@ -1,0 +1,4 @@
+<src/**>: traverse
+<binaries>: -traverse
+true: debug
+true: explain

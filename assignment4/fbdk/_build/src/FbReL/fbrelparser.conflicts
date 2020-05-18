@@ -1,0 +1,37 @@
+
+** Conflict (reduce/reduce) in state 54.
+** Token involved: EQUAL
+** This state is reached from main after reading:
+
+LCURLY label EQUAL expr SEMICOLON IDENT 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+appl_expr 
+simple_expr 
+LCURLY record_body RCURLY 
+       (?)
+
+** In state 54, looking ahead at EQUAL, reducing production
+** ident_decl -> IDENT 
+** is permitted because of the following sub-derivation:
+
+label EQUAL expr 
+            expr EQUAL expr // lookahead token appears
+            expr SEMICOLON expr // lookahead token is inherited
+                           appl_expr // lookahead token is inherited
+                           simple_expr // lookahead token is inherited
+                           ident_usage // lookahead token is inherited
+                           ident_decl // lookahead token is inherited
+                           IDENT . 
+
+** In state 54, looking ahead at EQUAL, reducing production
+** label -> IDENT 
+** is permitted because of the following sub-derivation:
+
+label EQUAL expr SEMICOLON record_body 
+                           label EQUAL expr // lookahead token appears
+                           IDENT . 

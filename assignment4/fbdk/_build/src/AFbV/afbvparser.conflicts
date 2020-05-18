@@ -1,0 +1,31 @@
+
+** Conflict (shift/reduce) in state 80.
+** Token involved: PIPE
+** This state is reached from main after reading:
+
+MATCH expr WITH VARIANT pattern_ident GOESTO MATCH expr WITH pattern_list 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+MATCH expr WITH pattern_list 
+                (?)
+
+** In state 80, looking ahead at PIPE, reducing production
+** expr -> MATCH expr WITH pattern_list 
+** is permitted because of the following sub-derivation:
+
+pattern_list PIPE pattern // lookahead token appears
+pattern // lookahead token is inherited
+VARIANT pattern_ident GOESTO expr // lookahead token is inherited
+                             MATCH expr WITH pattern_list . 
+
+** In state 80, looking ahead at PIPE, shifting is permitted
+** because of the following sub-derivation:
+
+pattern 
+VARIANT pattern_ident GOESTO expr 
+                             MATCH expr WITH pattern_list 
+                                             pattern_list . PIPE pattern 

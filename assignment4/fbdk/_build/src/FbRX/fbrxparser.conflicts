@@ -1,0 +1,341 @@
+
+** Conflict (shift/reduce) in state 75.
+** Tokens involved: PLUS OR MINUS EQUAL APPEND AND
+** The following explanations concentrate on token PLUS.
+** This state is reached from main after reading:
+
+TRY expr WITH exn_def IDENT GOESTO expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 75, looking ahead at PLUS, shifting is permitted
+** because of the following sub-derivation:
+
+TRY expr WITH exn_def IDENT GOESTO expr 
+                                   expr . PLUS expr 
+
+** In state 75, looking ahead at PLUS, reducing production
+** expr -> TRY expr WITH exn_def IDENT GOESTO expr 
+** is permitted because of the following sub-derivation:
+
+expr PLUS expr // lookahead token appears
+TRY expr WITH exn_def IDENT GOESTO expr . 
+
+** Conflict (shift/reduce) in state 69.
+** Tokens involved: PLUS OR MINUS EQUAL APPEND AND
+** The following explanations concentrate on token PLUS.
+** This state is reached from main after reading:
+
+RAISE exn_def expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 69, looking ahead at PLUS, shifting is permitted
+** because of the following sub-derivation:
+
+RAISE exn_def expr 
+              expr . PLUS expr 
+
+** In state 69, looking ahead at PLUS, reducing production
+** expr -> RAISE exn_def expr 
+** is permitted because of the following sub-derivation:
+
+expr PLUS expr // lookahead token appears
+RAISE exn_def expr . 
+
+** Conflict (shift/reduce) in state 68.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+NOT expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 68, looking ahead at APPEND, reducing production
+** expr -> NOT expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+NOT expr . 
+
+** In state 68, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+NOT expr 
+    expr . APPEND expr 
+
+** Conflict (shift/reduce) in state 65.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+LET ident_decl EQUAL expr IN expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 65, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+LET ident_decl EQUAL expr IN expr 
+                             expr . APPEND expr 
+
+** In state 65, looking ahead at APPEND, reducing production
+** expr -> LET ident_decl EQUAL expr IN expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+LET ident_decl EQUAL expr IN expr . 
+
+** Conflict (shift/reduce) in state 60.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+LET REC ident_decl ident_decl EQUAL expr IN expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 60, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+LET REC ident_decl ident_decl EQUAL expr IN expr 
+                                            expr . APPEND expr 
+
+** In state 60, looking ahead at APPEND, reducing production
+** expr -> LET REC ident_decl ident_decl EQUAL expr IN expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+LET REC ident_decl ident_decl EQUAL expr IN expr . 
+
+** Conflict (shift/reduce) in state 54.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+IF expr THEN expr ELSE expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 54, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+IF expr THEN expr ELSE expr 
+                       expr . APPEND expr 
+
+** In state 54, looking ahead at APPEND, reducing production
+** expr -> IF expr THEN expr ELSE expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+IF expr THEN expr ELSE expr . 
+
+** Conflict (shift/reduce) in state 49.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+expr AND expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 49, looking ahead at APPEND, reducing production
+** expr -> expr AND expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+expr AND expr . 
+
+** In state 49, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+expr AND expr 
+         expr . APPEND expr 
+
+** Conflict (shift/reduce) in state 47.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+expr EQUAL expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 47, looking ahead at APPEND, reducing production
+** expr -> expr EQUAL expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+expr EQUAL expr . 
+
+** In state 47, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+expr EQUAL expr 
+           expr . APPEND expr 
+
+** Conflict (shift/reduce) in state 43.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+expr MINUS expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 43, looking ahead at APPEND, reducing production
+** expr -> expr MINUS expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+expr MINUS expr . 
+
+** In state 43, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+expr MINUS expr 
+           expr . APPEND expr 
+
+** Conflict (shift/reduce) in state 41.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+expr OR expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 41, looking ahead at APPEND, reducing production
+** expr -> expr OR expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+expr OR expr . 
+
+** In state 41, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+expr OR expr 
+        expr . APPEND expr 
+
+** Conflict (shift/reduce) in state 39.
+** Tokens involved: PLUS OR MINUS EQUAL APPEND AND
+** The following explanations concentrate on token PLUS.
+** This state is reached from main after reading:
+
+expr APPEND expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 39, looking ahead at PLUS, shifting is permitted
+** because of the following sub-derivation:
+
+expr APPEND expr 
+            expr . PLUS expr 
+
+** In state 39, looking ahead at PLUS, reducing production
+** expr -> expr APPEND expr 
+** is permitted because of the following sub-derivation:
+
+expr PLUS expr // lookahead token appears
+expr APPEND expr . 
+
+** Conflict (shift/reduce) in state 37.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+expr PLUS expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 37, looking ahead at APPEND, reducing production
+** expr -> expr PLUS expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+expr PLUS expr . 
+
+** In state 37, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+expr PLUS expr 
+          expr . APPEND expr 
+
+** Conflict (shift/reduce) in state 35.
+** Token involved: APPEND
+** This state is reached from main after reading:
+
+FUNCTION ident_decl GOESTO expr 
+
+** The derivations that appear below have the following common factor:
+** (The question mark symbol (?) represents the spot where the derivations begin to differ.)
+
+main 
+expr EOEX 
+(?)
+
+** In state 35, looking ahead at APPEND, shifting is permitted
+** because of the following sub-derivation:
+
+FUNCTION ident_decl GOESTO expr 
+                           expr . APPEND expr 
+
+** In state 35, looking ahead at APPEND, reducing production
+** expr -> FUNCTION ident_decl GOESTO expr 
+** is permitted because of the following sub-derivation:
+
+expr APPEND expr // lookahead token appears
+FUNCTION ident_decl GOESTO expr . 
